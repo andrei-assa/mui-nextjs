@@ -1,0 +1,93 @@
+{
+  "sections": [
+    {
+      "title": "Getting Started",
+      "items": [
+        "Introduction to Material UI",
+        "Setup and Installation",
+        "Understanding Material UI's Design Principles",
+        "Applying a Theme with Material UI"
+      ]
+    },
+    {
+      "title": "Basic Components",
+      "items": [
+        "Buttons & Icons",
+        "Typography & Paper",
+        "TextFields & Forms",
+        "Lists & Cards"
+      ]
+    },
+    {
+      "title": "Navigation Components",
+      "items": [
+        "App Bars & Toolbars",
+        "Drawers & Menus",
+        "Tabs & Bottom Navigation"
+      ]
+    },
+    {
+      "title": "Layout Components",
+      "items": [
+        "Grid system",
+        "Box & Container",
+        "Stack & Divider"
+      ]
+    },
+    {
+      "title": "Feedback Components",
+      "items": [
+        "Alerts & Dialogs",
+        "Progress Indicators",
+        "Snackbars & Toasts"
+      ]
+    },
+    {
+      "title": "Surfaces",
+      "items": [
+        "Accordion",
+        "Paper Elevation",
+        "Image List"
+      ]
+    },
+    {
+      "title": "Data Display",
+      "items": [
+        "Tables & Data Grids",
+        "Tooltips & Popovers",
+        "Badges & Avatars"
+      ]
+    },
+    {
+      "title": "Utils",
+      "items": [
+        "Transitions & Animations",
+        "Click Away Listener",
+        "Modal & Popper"
+      ]
+    },
+    {
+      "title": "Playgrounds",
+      "items": [
+        "Theme Customizer",
+        "Component Playground"
+      ]
+    },
+    {
+      "title": "Advanced Usage",
+      "items": [
+        "Customization Techniques",
+        "Performance Optimization",
+        "Integration with NextJS 14 features like the App Router"
+      ]
+    },
+    {
+      "title": "Tools",
+      "items": [
+        "Material UI Icons",
+        "Styles & Theming Tools",
+        "Material UI and NextJS SEO Best Practices"
+      ]
+    }
+  ]
+}
