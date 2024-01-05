@@ -18,6 +18,7 @@ import CodeSnippet from "../CodeSnippet"
 import codeSnippets from "./CodeSnippets"
 import TitledCard from "@/views/TitledCard";
 import {useRouter} from "next/navigation";
+import NextPreviousButtons from "@/views/NextPreviousButtons";
 
 const HoverEffectButton = () => {
     return (
@@ -237,14 +238,10 @@ const ButtonsAndIcons = () => {
                 <CodeSnippet code={codeSnippets.buttonWithConfirmation}/>
             </TitledCard>
 
-            <Box sx={{display: "flex", justifyContent: "space-between"}}>
-                <Button variant={'outlined'} onClick={() => {
-                    router.push('/applying-a-theme-with-material-ui')
-                }}>Previous: Applying a Theme</Button>
-                <Button variant={'outlined'} onClick={() => {
-                    router.push('/typography-&-paper')
-                }}>Next: Typography and Paper</Button>
-            </Box>
+            <NextPreviousButtons
+                previous={{text:"Applying a Theme", url:"/applying-a-theme-with-material-ui"}}
+                next={{text:"Typography and Paper", url: "/typography-&-paper"}}
+            />
         </Box>
     );
 };

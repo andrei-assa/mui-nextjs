@@ -1,14 +1,16 @@
 // CodeSnippet.tsx
-import React, { useState } from 'react';
-import { Accordion, AccordionSummary, AccordionDetails, Typography, Button, IconButton, Popover } from '@mui/material';
+import React, {useState} from 'react';
+import {Accordion, AccordionSummary, AccordionDetails, Typography, Button, IconButton, Popover} from '@mui/material';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import FileCopyIcon from '@mui/icons-material/FileCopy';
 import Prism from 'prismjs';
+// @ts-ignore
 import 'prismjs/components/prism-jsx.min'; // For JSX syntax
+import 'prismjs/components/prism-bash.min';
 import 'prismjs/themes/prism-tomorrow.css'; // Import a PrismJS theme
 
-const CodeSnippet = ({ code }: { code: string }) => {
-    const [expanded, setExpanded] = useState(false);
+const CodeSnippet = ({code, language = 'language-jsx', open=false}: { code: string, language?: string, open?: boolean }) => {
+    const [expanded, setExpanded] = useState<boolean>(open);
     const [anchorEl, setAnchorEl] = useState<HTMLButtonElement | null>(null);
 
     const handlePopoverOpen = (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
@@ -45,22 +47,22 @@ const CodeSnippet = ({ code }: { code: string }) => {
         <>
             <Accordion expanded={expanded} onChange={toggleAccordion}>
                 <AccordionSummary
-                    expandIcon={<ExpandMoreIcon />}
+                    expandIcon={<ExpandMoreIcon/>}
                     aria-controls="code-content"
                     id="code-header"
                 >
                     <Button variant={'outlined'}>{expanded ? 'Hide Code' : 'Show Code'}</Button>
                 </AccordionSummary>
-                <AccordionDetails sx={{ backgroundColor: 'rgba(45, 45, 45)', position: 'relative' }}>
+                <AccordionDetails sx={{backgroundColor: 'rgba(45, 45, 45)', position: 'relative'}}>
                     <IconButton
                         onClick={onCopyClick}
                         size="small"
-                        sx={{ position: 'absolute', top: '8px', right: '8px', color: 'white' }}
+                        sx={{position: 'absolute', top: '8px', right: '8px', color: 'white'}}
                     >
-                        <FileCopyIcon />
+                        <FileCopyIcon/>
                     </IconButton>
-                    <Typography component="pre" sx={{ overflowX: 'auto', margin: '0' }}>
-                        <code className="language-jsx">
+                    <Typography component="pre" sx={{overflowX: 'auto', margin: '0'}}>
+                        <code className={language}>
                             {code}
                         </code>
                     </Typography>
@@ -79,7 +81,7 @@ const CodeSnippet = ({ code }: { code: string }) => {
                     horizontal: 'center',
                 }}
             >
-                <Typography sx={{ p: 1 }}>Copied!</Typography>
+                <Typography sx={{p: 1}}>Copied!</Typography>
             </Popover>
         </>
     );

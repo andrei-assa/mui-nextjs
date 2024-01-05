@@ -19,21 +19,6 @@ export default function Layout({children}: { children: React.ReactNode }) {
     return (
         <Box sx={{maxHeight:"100vh"}}>
             <AppBar logoText={"MUI + NextJS"} handleDrawerOpen={handleDrawerToggle}/>
-            <Drawer
-                open={open}
-                onClose={handleDrawerToggle}
-                variant={'temporary'}
-            >
-                <List>
-                    {navigationLinks.map((link, index) => (
-                        <ListItem key={link.text}>
-                            <Link href={link.url}>
-                                <ListItemText primary={link.text}/>
-                            </Link>
-                        </ListItem>
-                    ))}
-                </List>
-            </Drawer>
             {children}
         </Box>
     );

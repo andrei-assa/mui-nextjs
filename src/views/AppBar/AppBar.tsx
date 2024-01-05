@@ -6,7 +6,7 @@ import Typography from '@mui/material/Typography';
 import MenuIcon from '@mui/icons-material/Menu';
 import Link from "next/link";
 import config from "../../config"
-import {Box} from "@mui/material";
+import {Box, Container} from "@mui/material";
 
 interface IAppBarProps {
     logoText: string;
@@ -17,14 +17,13 @@ const AppBarComponent: React.FC<IAppBarProps> = ({logoText, handleDrawerOpen}) =
     <Box>
         <AppBar position="fixed" color={'primary'} sx={{height: config.appBarHeight}}>
             <Toolbar>
-                <IconButton edge="start" color="inherit" onClick={handleDrawerOpen}>
-                    <MenuIcon/>
-                </IconButton>
-                <Link href={'/'} style={{color: "inherit", textDecoration: "none"}}>
-                    <Typography variant="h6">
-                        {logoText}
-                    </Typography>
-                </Link>
+                <Container maxWidth={'xl'}>
+                    <Link href={'/'} style={{color: "inherit", textDecoration: "none"}}>
+                        <Typography variant="h6">
+                            {logoText}
+                        </Typography>
+                    </Link>
+                </Container>
             </Toolbar>
         </AppBar>
         <Toolbar/>
