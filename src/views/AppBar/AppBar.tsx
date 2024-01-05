@@ -31,3 +31,4 @@ const AppBarComponent: React.FC<IAppBarProps> = ({logoText, handleDrawerOpen}) =
 );
 
 export default AppBarComponent;
+
