@@ -9,7 +9,8 @@ import {
     TypographyAndPaperView,
     TextFieldsAndFormsView,
     ListsAndCardsView,
-    DrawersAndMenusView
+    DrawersAndMenusView,
+    AppBarsAndToolbarsView
 } from "@/views";
 import {notFound} from "next/navigation";
 
@@ -29,7 +30,8 @@ const navigationViews: { [key: string]: React.ComponentType } = {
     "typography-&-paper": TypographyAndPaperView,
     "textfields-&-forms": TextFieldsAndFormsView,
     'lists-&-cards': ListsAndCardsView,
-    'drawers-&-menus': DrawersAndMenusView
+    'drawers-&-menus': DrawersAndMenusView,
+    'app-bars-&-toolbars': AppBarsAndToolbarsView
 
     // Add other routes and component mappings as needed
 };
