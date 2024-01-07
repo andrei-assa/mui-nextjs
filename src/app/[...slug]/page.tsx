@@ -10,7 +10,8 @@ import {
     TextFieldsAndFormsView,
     ListsAndCardsView,
     DrawersAndMenusView,
-    AppBarsAndToolbarsView
+    AppBarsAndToolbarsView,
+    AutocompleteView
 } from "@/views";
 import {notFound} from "next/navigation";
 
@@ -29,6 +30,7 @@ const navigationViews: { [key: string]: React.ComponentType } = {
     "understanding-material-ui's-design-principles": UnderstandingMuiView,
     "typography-&-paper": TypographyAndPaperView,
     "textfields-&-forms": TextFieldsAndFormsView,
+    'autocomplete': AutocompleteView,
     'lists-&-cards': ListsAndCardsView,
     'drawers-&-menus': DrawersAndMenusView,
     'app-bars-&-toolbars': AppBarsAndToolbarsView

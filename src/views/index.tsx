@@ -10,3 +10,4 @@ export { default as TextFieldsAndFormsView } from './TextFieldsAndFormsView';
 export { default as ListsAndCardsView } from './ListsAndCardsView';
 export { default as DrawersAndMenusView } from './DrawersAndMenusView';
 export { default as AppBarsAndToolbarsView } from './AppBarsAndToolbarsView';
+export { default as AutocompleteView } from './AutocompleteView';
